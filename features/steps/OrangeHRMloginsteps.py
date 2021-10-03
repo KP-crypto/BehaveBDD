@@ -3,7 +3,9 @@ from selenium import webdriver
 from webdriver-manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.option import Options
 chrome_option = Options()
-chrome_option.add_argument('--hedless'_
+chrome_option.add_argument('--hedless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
 
 @given(u'I Launch Chrome Browser')
 def step_impl(context):
