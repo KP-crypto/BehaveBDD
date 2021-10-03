@@ -1,9 +1,13 @@
 from behave import*
 from selenium import webdriver
+from webdriver-manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.option import Options
+chrome_option = Options()
+chrome_option.add_argument('--hedless'_
 
 @given(u'I Launch Chrome Browser')
 def step_impl(context):
-    context.driver = webdriver.Chrome(executable_path="C:/Users/Acer/Downloads/chromedriver_win32/chromedriver.exe")
+    context.driver = webdriver.Chrome(ChromeDriverManager().install(),options=chrome_option)
 
 @when(u'open Homepage')
 def step_impl(context):
